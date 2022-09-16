@@ -1,0 +1,14 @@
+syntax = "proto3";
+package blog1.blog1;
+
+import "gogoproto/gogo.proto";
+import "blog1/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "blog1/x/blog1/types";
+
+// GenesisState defines the blog1 module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
